@@ -80,5 +80,17 @@ function ajusterTaillePolice() {
 
 
 
-
-
+// Afficher Heure Numerique
+//==========================================================
+function afficherHeureNum() {
+    const dateNum = new Date();
+    let heuresNum = dateNum.getHours();
+    let minutesNum = dateNum.getMinutes();
+    let secondesNum = dateNum.getSeconds();
+    heuresNum = heuresNum < 10 ? '0' + heuresNum : heuresNum; 
+    minutesNum = minutesNum < 10 ? '0' + minutesNum : minutesNum;
+    secondesNum = secondesNum < 10 ? '0' + secondesNum : secondesNum;
+    let heureNumerique = heuresNum + ' : ' + minutesNum;
+    document.getElementById('horloge_numeriques').innerText = heureNumerique;
+}
+setInterval(afficherHeureNum, 1000);
