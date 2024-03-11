@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,500,0,200" /> -->
+</head>
+
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+    </style>
+    <div class="calculatrice_container">
+        <div class="calculatrice">
+            <div class="ecran">
+                <div class="logos">
+                    <div class="logos-left">
+                        <ion-icon name="cellular-sharp" class="logo"></ion-icon>
+                        <ion-icon name="chatbubbles-sharp" class="logo"></ion-icon>
+                    </div>
+                    <div class="logos-right">
+                        <ion-icon name="alarm-sharp" class="logo"></ion-icon>
+                        <ion-icon name="bluetooth-sharp" class="logo"></ion-icon>
+                        <ion-icon name="battery-half-sharp" class="logo"></ion-icon>
+                        <!-- Rajouter l'heure -->
+                    </div>
+                </div>
+                <div class="résultat"></div>
+            </div>
+            <div class="touches_container">
+                <div class="touches">
+                    <button onclick="clearAll()" class="bouton operation clear">C</button>
+                    <button onclick="inputOperation('/')" class="bouton operation diviser">÷</button>
+                    <button onclick="inputOperation('*')" class="bouton operation multiplier"><ion-icon name="close-sharp"></ion-icon></button>
+                    <button onclick="clearOne()" class="bouton operation supprimer"><ion-icon name="backspace-outline"></ion-icon></button>
+                    <button onclick="inputOperation('-')" class="bouton operation moins">-</button>
+                    <button onclick="inputOperation('+')" class="bouton operation plus">+</button>
+                    <button onclick="result()" class="bouton grandeTouche egal">=</button>
+                    <button onclick="inputChiffre(',')" class=" bouton chiffre virgule">,</button>
+                    <button onclick="inputChiffre('%')" class="bouton chiffre pourcentage">%</button>
+                    <button onclick="inputChiffre('9')" class="bouton chiffre neuf">9</button>
+                    <button onclick="inputChiffre('8')" class="bouton chiffre huit">8</button>
+                    <button onclick="inputChiffre('7')" class="bouton chiffre sept">7</button>
+                    <button onclick="inputChiffre('6')" class="bouton chiffre six">6</button>
+                    <button onclick="inputChiffre('5')" class="bouton chiffre cinq">5</button>
+                    <button onclick="inputChiffre('4')" class="bouton chiffre quatre">4</button>
+                    <button onclick="inputChiffre('3')" class="bouton chiffre trois">3</button>
+                    <button onclick="inputChiffre('2')" class="bouton chiffre deux">2</button>
+                    <button onclick="inputChiffre('1')" class="bouton chiffre un">1</button>
+                    <button onclick="inputChiffre('0')" class="bouton chiffre zero">0</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
