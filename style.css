@@ -59,6 +59,14 @@ ion-icon {
     gap: 10px;
 }
 
+.résultat_container {
+    width: 98%;
+    height: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .résultat {
     width: 98%;
     height: 70%;
@@ -67,7 +75,25 @@ ion-icon {
     justify-content: end;
     align-items: center;
     font-size: 55px;
-    
+}
+
+.barreVerticale {
+    width: 2px;
+    height: 44%;
+    background-color: #3877F0;
+    animation: 0.6s barreVerticale alternate infinite;
+}
+
+@keyframes barreVerticale {
+    0% {
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
 }
 
 .touches_container {
@@ -91,21 +117,21 @@ ion-icon {
 .logo {
     color : white;
     font-size: 14px;
-    margin: 3px;
+    margin: 2px;
 }
 
 .logos-left {
     display: flex;
     justify-content: start;
     width: 50%;
-    margin-left: 15px;
+    margin-left: 10px;
     height: 100%;
 }
 
 .logos-right {
     display: flex;
     justify-content: end;
-    margin-right: 15px;
+    margin-right: 10px;
     width: 50%;
     height: 100%;
 
@@ -224,4 +250,5 @@ button {
     justify-content: center;
     align-items: center;
 }
+
 

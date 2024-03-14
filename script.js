@@ -40,7 +40,7 @@ function clearOne() {
     if (!isNaN(input)) {
         input = input.toString();
     }
-    input = input.substr(0, input.length - 1);
+    input = input.slice(0, input.length - 1);
     ajouterEcran();
     ajusterTaillePolice();
 }
@@ -77,6 +77,76 @@ function ajusterTaillePolice() {
     }
     ecran.style.fontSize = taillePolice + 'px';
 }
+
+
+document.addEventListener('keydown', function(event){
+    let key = event.key;
+
+    switch (key) {
+        case event = "1":
+            inputChiffre("1");
+            break;
+        case event = "2":
+            inputChiffre("2");
+            break;
+        case event = "3":
+            inputChiffre("3");
+            break;
+        case event = "4":
+            inputChiffre("4");
+            break;
+        case event = "5":
+            inputChiffre("5");
+            break;  
+        case event = "6":
+            inputChiffre("6");
+            break;
+        case event = "7":
+            inputChiffre("7");
+            break;
+        case event = "8":
+            inputChiffre("8");
+            break;
+        case event = "9":
+            inputChiffre("9");
+            break;
+        case event = "0":
+            inputChiffre("0");
+            break;        
+        case event = "*":
+            inputOperation("*");
+            break;  
+        case event = "/":
+            inputOperation("/");
+            break;  
+        case event = "+":
+            inputOperation("+");
+            break;   
+        case event = "-":
+            inputOperation("-");
+            break;                  
+        case event = "=":
+            result();
+            break;
+        case event = "Enter":
+            result(12);
+            break;
+        case event = "Backspace":
+            clearOne();
+            break;
+        case event = "Delete":
+            clearAll();
+            break;   
+            default:
+            break;
+    }
+});
+
+
+
+
+
+
 
 
 
